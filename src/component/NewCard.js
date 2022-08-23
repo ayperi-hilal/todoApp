@@ -1,20 +1,19 @@
 import React from "react";
-import reactDom from "react-dom";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import Button from "./Button/Button";
 
-const NewCard = () => {
+const NewCard = (props) => {
     return (
         <View style={styles.container}>
             <TextInput
                 placeholder="Yapılacak..."
                 style={styles.giris}
+                // onChangeText={props.todo.onChange} //onchabge nedir?
                placeholderTextColor='#969696'
-
+            //    value={props.todo.name} //burada hataya düşüyor.
+           
             />
-            <View style={styles.seperator}></View>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.metin}>Kaydet</Text>
-            </TouchableOpacity>
+          <Button/>
         </View>
     )
 }
