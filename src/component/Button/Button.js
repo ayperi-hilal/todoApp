@@ -1,41 +1,14 @@
 import React, { useState } from "react"
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-// const [input, setInput] = useState('')
-// const [todos,setTodos]=useState([
-//     {
-//     id:1,
-//             title:'Learn React Native',
-//             completed:true
-//         },
-//         {
-//             id:2,
-//             title:'Learn React',
-//             completed:false
-//         },  
-// ]);
 
-// const addTodo = () => {
-//     if (input.trim()) {
-//         const newTodo = {
-
-//             id: Math.floor(Math.random() * 100),
-//             title:input,
-//             completed:false
-
-//         }
-    
-//     }
-// }
-const Button = () => {
-    /*props */
+const Button = ({ onPress }) => {
     return (
-        <View>
+        <View >
             <View style={styles.seperator}></View>
-            <TouchableOpacity 
-            // onPress={props.oButtonPress} //hataya düşüyor
-            style={styles.button}
-                
+            <TouchableOpacity
+                onPress={onPress}
+                style={styles.button}
             >
                 <Text style={styles.metin}>Kaydet</Text>
             </TouchableOpacity>

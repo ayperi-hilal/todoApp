@@ -1,22 +1,23 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
-import Button from "./Button/Button";
 
 const NewCard = (props) => {
     return (
-        <View style={styles.container}>
+        <View >
             <TextInput
                 placeholder="Yapılacak..."
                 style={styles.giris}
-                // onChangeText={props.todo.onChange} //onchabge nedir?
-               placeholderTextColor='#969696'
-            //    value={props.todo.name} //burada hataya düşüyor.
-           
+                onChangeText={props.onChange}
+                placeholderTextColor='#969696'
+                value={props.value}
+
             />
-          <Button/>
+
+           
         </View>
     )
 }
+
 
 export default NewCard;
 
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
     seperator: {
         borderColor: '#cef0f7',
         borderWidth: 1,
-        marginLeft:9,
-        marginRight:9,
+        marginLeft: 9,
+        marginRight: 9,
     },
     button: {
         padding: 10,
@@ -40,12 +41,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#969696',
         margin: 10,
         borderRadius: 20,
-        margin:20
+        margin: 20
     },
     giris: {
         margin: 10,
-        fontSize:20
-        
+        fontSize: 20
+
     },
     metin: {
         fontSize: 20,

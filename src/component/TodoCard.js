@@ -15,8 +15,9 @@ const TodoCard = (props) => {
     return (
         <View style={styles.card}>
             <TouchableOpacity
-                onPress={props.todo.onPress}
-                onLongPress={props.todo.onLongPress}
+                onPress={props.onPress}
+                onLongPress={props.onLongPress}
+                
             >
                 <Text style={textStyle}>{props.todo.name}</Text>
                 <Text> {props.todo.isDone}</Text>
